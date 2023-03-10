@@ -32,6 +32,7 @@ body {
   max-width: 13rem;
   display: block;
   margin: 0 auto;
+  transform: scale(0.01);
 }
 
 .accordion-item__label {
@@ -69,6 +70,11 @@ body {
 
 .accordion-item__input:checked ~ .accordion-item__label .accordion-item__icon {
   transform: rotate(0);
+}
+
+.accordion-item__input:checked ~ .accordion-item__content .accordion-item__image {
+  transform: scale(1);
+  transition-duration: 0.3s;
 }
 
 .accordion-item__input:hover ~ .accordion-item__label .accordion-item__icon {
