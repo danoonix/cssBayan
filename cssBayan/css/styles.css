@@ -1,12 +1,10 @@
 body {
   --main-color: #e5e5e5;
   --text-color: #8c8988;
-  width: 100vw;
 }
 
 * {
   box-sizing: border-box;
-  transition-duration: 0.7s;
 }
 
 .wrapper {
@@ -25,19 +23,21 @@ body {
 }
 
 .accordion:hover .accordion-item__icon {
-  display: block;
+  opacity: 1;
+  transition-duration: 0.7s;
 }
 
 .accordion-item__image {
-  max-width: 13rem;
   display: block;
   margin: 0 auto;
-  transform: scale(0.01);
+  width: 10rem;
+  transition-duration: 0.3s;
+  opacity: 0;
 }
 
 .accordion-item__label {
   color: var(--text-color);
-  /* padding: 0.75rem; */
+  padding: 0.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,37 +51,51 @@ body {
 }
 
 .accordion-item__icon {
-  display: none;
+  opacity: 0;
+  transition-duration: 0.7s;
   width: 1.5rem;
   transform: rotate(45deg);
+  transition-duration: 1s;
 }
 
 .accordion-item__input {
   display: none;
 }
 
-.accordion-item__label:hover ~ .accordion-item__content {
-  display: block;
+.accordion-item__input:checked ~ .accordion-item__content {
+  max-height: 20rem;
+  transition-duration: 0.7s;
 }
 
-.accordion-item__input:checked ~ .accordion-item__content {
-  display: block;
+.accordion-item__input:hover ~ .accordion-item__content {
+  max-height: 1000vh;
+  transition-duration: 0.7s;
+}
+
+.accordion-item__input:checked ~ .accordion-item__content .accordion-item__image {
+  transition-duration: 0.7s;
+  opacity: 1;
+  width: 20rem;
+}
+
+.accordion-item__input:hover ~ .accordion-item__content .accordion-item__image {
+  transition-duration: 0.7s;
+  opacity: 1;
+  width: 20rem;
 }
 
 .accordion-item__input:checked ~ .accordion-item__label .accordion-item__icon {
   transform: rotate(0);
-}
-
-.accordion-item__input:checked ~ .accordion-item__content .accordion-item__image {
-  transform: scale(1);
-  transition-duration: 0.3s;
+  transition-duration: 0.7s;
 }
 
 .accordion-item__input:hover ~ .accordion-item__label .accordion-item__icon {
   transform: rotate(0);
+  transition-duration: 1s;
 }
 
 .accordion-item__content {
-  display: none;
+  max-height: 0;
   padding-bottom: 0.75rem;
+  transition-duration: 0.7s;
 }
