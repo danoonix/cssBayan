@@ -2,7 +2,7 @@ body {
   --main-color: #e5e5e5;
   --text-color: #8c8988;
   --black-color: #000000;
-  --blue-color: #19b2e6;
+  --red-color: #ff4000;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -24,19 +24,22 @@ body {
   cursor: pointer;
 }
 
-
-
 .accordion:hover .accordion-item__header {
   color: var(--black-color);
 }
 
 .accordion-item__label:active .accordion-item__header {
-  color: var(--blue-color);
+  color: var(--red-color);
 }
 
 .accordion-item__label:active .accordion-item__icon {
-  fill: var(--blue-color);
-  stroke: var(--blue-color);
+  fill: var(--red-color);
+  stroke: var(--red-color);
+}
+
+.accordion-item__label:active {
+  transition-duration: 0.5s;
+  filter: brightness(1.3);
 }
 
 .accordion:hover .accordion-item__icon {
