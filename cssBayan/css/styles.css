@@ -137,20 +137,30 @@ img.accordion-item__image {
   }
   .accordion-item__icon {
     opacity: 1;
-    width: 1.5rem;
+    width: 1rem;
   }
   .accordion-item__input:checked ~ label.accordion-item__label .accordion-item__image {
-    width: 80%;
+    width: 70%;
   }
   .accordion-item__label:hover .accordion-item__image {
-    width: 80%;
+    width: 70%;
   }
 }
 
-@media(min-width: 800px) {
+@media(min-width: 820px) {
   .wrapper {
     max-width: 70vw;
     font-size: 1.5rem;
+  }
+  .accordion-item__icon {
+    opacity: 1;
+    width: 1.5rem;
+  }
+  .accordion-item__input:checked ~ label.accordion-item__label .accordion-item__image {
+    width: 60%;
+  }
+  .accordion-item__label:hover .accordion-item__image {
+    width: 60%;
   }
   .accordion-item__label {
     padding: 1rem;
@@ -161,12 +171,6 @@ img.accordion-item__image {
   .accordion-item__icon {
     opacity: 0;
     width: 2rem;
-  }
-  .accordion-item__input:checked ~ label.accordion-item__label .accordion-item__image {
-    width: 70%;
-  }
-  .accordion-item__label:hover .accordion-item__image {
-    width: 70%;
   }
 }
 
@@ -185,9 +189,9 @@ img.accordion-item__image {
     width: 2.5rem;
   }
   .accordion-item__input:checked ~ label.accordion-item__label .accordion-item__image {
-    width: 60%;
+    width: 50%;
   }
   .accordion-item__label:hover .accordion-item__image {
-    width: 60%;
+    width: 50%;
   }
 }
