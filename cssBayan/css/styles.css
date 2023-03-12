@@ -44,8 +44,14 @@ body {
   align-items: space-between;
   flex-wrap: wrap;
   width: 100%;
-  border-top: 0.0625rem solid var(--main-color);
+  border: 0.0625rem solid var(--main-color);
+  border-bottom: none;
 }
+
+.accordion-item__label:last-child {
+  border-bottom: 0.0625rem solid var(--main-color);
+}
+
 
 .accordion-item__header {
   padding: 0;
@@ -97,4 +103,5 @@ label.accordion-item__label:hover img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 0.75rem;
 }
